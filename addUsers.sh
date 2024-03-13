@@ -5,7 +5,7 @@ myname="sabrina"
 PASS="wjsansrk"
 
 for i in "${names[@]}"; do
-  if [$i == sabrina]; then
+  if [$i == $myname]; then
     continue
   fi 
   adduser $i
