@@ -7,7 +7,7 @@ PASS="wjsansrk"
 for i in "${names[@]}"; do
   if [$i == $myname]; then
     continue
-  fi 
+  fi
   adduser $i
   echo "$PASS" | passwd "$i" --stdin
 done
