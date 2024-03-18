@@ -6,20 +6,21 @@ groupKT=("boser" "haper" "janela" "caley" "qimat" "linda" "timber" "adel" "julia
 groupLGT=("vincent" "tajer" "eille" "edwin" "dewey" "qadani" "willy" "dexter" "jasmin" "robert" "tania" "yummer" "damber" "owner" "siniker")
 groupSKT=("edgar" "harper" "devan" "kori" "dana" "genevi" "xandra" "dante" "ximena" "lavina" "vister" "snower" "david" "shiniper" "nower" "kimber" "jini")
 
-# Start Adding group name KT
-groupadd -g 1000 kt
+# Start Adding groups
+groupadd -f -g 1000 kt
+groupadd -f -g 1001 skt
+groupadd -f -g 1002 lgt
+
+
+# Start adding users to groups
 for i in "${groupKT[@]}"; do
-  adduser -g kt "${i}"
+  gpasswd -a kt "${i}"
 done
 
-# Start Adding group name SKT
-groupadd -g 1001 skt
 for i in "${groupSKT[@]}"; do
-  adduser -g skt "${i}"
+  gpasswd -a skt "${i}"
 done
 
-# Start Adding group name LGT
-groupadd -g 1002 lgt
 for i in "${groupLGT[@]}"; do
-  adduser -g lgt "${i}"
+  gpasswd -a lgt "${i}"
 done
