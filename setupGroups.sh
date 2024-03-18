@@ -11,16 +11,15 @@ groupadd -f -g 1000 kt
 groupadd -f -g 1001 skt
 groupadd -f -g 1002 lgt
 
-
 # Start adding users to groups
 for i in "${groupKT[@]}"; do
-  gpasswd -a kt "${i}"
+  gpasswd -a "${i}" kt
 done
 
 for i in "${groupSKT[@]}"; do
-  gpasswd -a skt "${i}"
+  gpasswd -a "${i}" skt
 done
 
 for i in "${groupLGT[@]}"; do
-  gpasswd -a lgt "${i}"
+  gpasswd -a "${i}" lgt
 done
